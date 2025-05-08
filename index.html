@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Interativo DS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container nav-container">
+            <a href="PROJETO-SITE INTERATIVO.html" class="logo"><h3>RJL Interactions</h3></a>
+            <ul class="nav-link">
+          
+                
+            </ul>
+            <ul class="social-link">
+                <li><a href="linkdoperfildoface"><img src="logoface.gif" width="40" height="40" alt="Facebook"></a></li>
+               
+                <li><a href="linkdoperfildoinsta"><img src="logoinsta.gif" width="40" height="40" alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+   
+    <header>
+        JOGO INTERATIVO DS
+    </header>
+
+    
+    <main class="container">
+        <div class="containerBotoes">
+            <button class="botao azul">Home</button>
+            <button class="botao roxo">Sobre</button>
+            <button class="botao verde">Serviços</button>
+            <button class="botao laranja">Contato</button>
+          </div>
+          
+        <section class="grid">
+            
+            <section class="grid">
+                <a href="pagina-4-6.html" class="design-link">
+                  <div class="design">
+                    <img src="4-6anos.png" alt="4-6 anos">
+                    <h2>4-6 anos</h2>
+                  </div>
+                </a>
+              </section>
+              <section class="grid">
+                <a href="pagina-4-6.html" class="design-link">
+                  <div class="design">
+                    <img src="4-6anos.png" alt="7-9 anos">
+                    <h2>7-9 anos</h2>
+                  </div>
+                </a>
+              </section>
+              <section class="grid">
+                <a href="pagina-4-6.html" class="design-link">
+                  <div class="design">
+                    <img src="4-6anos.png" alt="10-12 anos">
+                    <h2>10-12 anos</h2>
+                  </div>
+                </a>
+              </section>
+              
+    </main>
+
+  
+    <footer>
+        <p>Site Interativo - Grupo RJL</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          document.querySelectorAll(".botao").forEach(botao => {
+            botao.addEventListener("mouseenter", () => {
+              botao.style.animation = "mascara 0.7s steps(22) forwards";
+            });
+      
+            botao.addEventListener("mouseleave", () => {
+              botao.style.animation = "mascaraInverso 0.7s steps(22) forwards";
+            });
+      
+            botao.addEventListener("click", (event) => {
+              event.preventDefault();
+              const isMobile = window.matchMedia("(max-width: 767px)").matches;
+              const link = "https://seulink.com"; // Substitua aqui!
+      
+              if (isMobile) {
+                setTimeout(() => {
+                  window.open(link, "_blank");
+                }, 700);
+              } else {
+                window.open(link, "_blank");
+              }
+            });
+          });
+        });
+      </script>
+      
+</body>
+</html>
